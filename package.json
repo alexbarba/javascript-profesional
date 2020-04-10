@@ -1,0 +1,24 @@
+{
+	"name": "platzi-media-player",
+	"version": "1.0.0",
+	"description": "Proyecto del Curso Profesional de JavaScript de la Escuela de JavaScript de Platzi.",
+	"license": "MIT",
+	"author": "Alexis Barba <alexisbarbaperez@gmail.com>",
+	"keywords": [
+		"platzi"
+	],
+	"scripts": {
+		"start": "live-server"
+	},
+	"devDependencies": {
+		"live-server": "^1.2.1",
+		"parcel-bundler": "^1.12.3",
+		"typescript": "^3.5.3"
+	},
+	"browserslist": [
+		"last 1 Chrome version"
+	],
+	"dependencies": {
+		"@sparragus/platzimediaplayer": "^1.0.0"
+	}
+}
