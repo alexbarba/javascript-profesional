@@ -5,6 +5,7 @@ class MediaPlayer {
 		if (this.plugins) {
 			this._initPlugins();
 		}
+		this.interactionIsActive = true;
 	}
 	play() {
 		this.media.play();
@@ -23,8 +24,10 @@ class MediaPlayer {
 	togglePlay() {
 		if (this.media.paused) {
 			this.play();
+			this.interactionIsActive = true;
 		} else {
 			this.pause();
+			this.interactionIsActive = false;
 		}
 	}
 
