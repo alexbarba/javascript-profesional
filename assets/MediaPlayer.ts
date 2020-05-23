@@ -1,11 +1,24 @@
 class MediaPlayer {
+	media: HTMLMediaElement;
+	plugins: Array<any>;
+	interactionIsActive: Boolean;
+	container: HTMLElement;
+
 	constructor(config) {
 		this.media = config.el;
 		this.plugins = config.plugins || [];
+		this.initPlayer();
 		if (this.plugins) {
-			this._initPlugins();
+			this.initPlugins();
 		}
 		this.interactionIsActive = true;
+	}
+
+	initPlayer() {
+		this.container = document.createElement("div");
+		this.container.style.position = "relative";
+		this.media.parentNode.insertBefore(this.container, this.media);
+		this.container.appendChild(this.media);
 	}
 	play() {
 		this.media.play();
@@ -15,7 +28,7 @@ class MediaPlayer {
 		this.media.pause();
 	}
 
-	_initPlugins() {
+	private initPlugins() {
 		this.plugins.forEach((plugin) => {
 			plugin.run(this);
 		});

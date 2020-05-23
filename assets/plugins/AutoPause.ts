@@ -1,4 +1,8 @@
+import MediaPlayer from "../MediaPlayer";
+
 class AutoPause {
+	threshold: number;
+	player: MediaPlayer;
 	constructor() {
 		this.threshold = 0.25;
 		this.handleIntersection = this.handleIntersection.bind(this);
