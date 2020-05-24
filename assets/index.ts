@@ -1,7 +1,7 @@
-import MediaPlayer from "./MediaPlayer";
-import AutoPlay from "./plugins/AutoPlay";
-import AutoPause from "./plugins/AutoPause";
-import Ads from "./plugins/Ads";
+import MediaPlayer from "@alexbarba/platzimediaplayer/lib/MediaPlayer";
+import AutoPlay from "@alexbarba/platzimediaplayer/lib/plugins/AutoPlay";
+import AutoPause from "@alexbarba/platzimediaplayer/lib/plugins/AutoPause";
+import Ads from "@alexbarba/platzimediaplayer/lib/plugins/Ads";
 
 const video = document.querySelector("video");
 const playButton: HTMLElement = document.getElementById("playButton");
